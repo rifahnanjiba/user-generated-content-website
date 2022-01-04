@@ -1,4 +1,4 @@
-@extends('layouts.template')
+@extends('layouts.loggedout')
 <html>
     <head>
         <meta charset="UTF-8">
@@ -6,10 +6,12 @@
     </head>
     <body>
         <?php
+        
+        $title = "Home";
         $res = " 
         <br>
         <tr>
-        <form action='/sort' method='get'>
+        <form action='/sortLO' method='get'>
         <select id='genre' name='genreSelect'>
         <option value='All'>All</option>";
 
@@ -57,6 +59,7 @@
 
         $res = $res."</table>";
         $content = $res;
+        
          ?>
         
     </body>

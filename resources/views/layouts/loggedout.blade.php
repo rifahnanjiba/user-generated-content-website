@@ -196,10 +196,9 @@ footer
             
             <nav id = "navigation">
                 <ul id = "nav">
-                    <li><a href = "/home/loggedin">Home</a></li>
-                    <li><a href = "/home/loggedin/create">Create</a></li>
-                    <li><a href = "/profile">My Profile</a></li>
-                    <li><a href = "/logout">Log Out</a></li>
+                    <li><a href = "/loggedout">Home</a></li>
+                    <li><a href = "/login">Log in</a></li>
+                    <li><a href = "/signup">Sign up</a></li>
                 </ul>
             </nav>
             

@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class Blogs extends Migration
+class Genre extends Migration
 {
     /**
      * Run the migrations.
@@ -13,11 +13,10 @@ class Blogs extends Migration
      */
     public function up()
     {
-        Schema::create('blogs', function (Blueprint $table) {
-            $table->increments('id');
-            $table->string('title');
-            $table->mediumText('body');
-            $table->timestamps();
+        Schema::create('genre', function (Blueprint $table) {
+            $table->increments('genreid');
+            $table->string('genre');
+
         });
     }
 

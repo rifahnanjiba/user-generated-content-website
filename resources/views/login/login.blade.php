@@ -6,7 +6,8 @@
 </head>
 
 <body>
-    <div style="background-image: url(Images/v4.jpg); background-size: 60% 700px; width: 100%; height: 690px; background-repeat: no-repeat; background-position: bottom;">
+    <div style="background-size: 70% 700px; width: 100%; height: 710px; background-repeat: no-repeat; background-position: bottom;
+                background-color: #8ea667">
         <h1 style="font-size: 50px; padding-left: 60px; padding-top: 20px; font-family: verdana">Welcome back!</h1>
     <br><br><br><br><br><br><br><br><br><br><br><br><br>
  

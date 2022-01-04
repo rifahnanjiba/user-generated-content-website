@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Login;
+use App\Models\PublishedWork;
+use App\Models\Genre;
 
 class LoginController extends Controller
 {
@@ -21,6 +23,15 @@ class LoginController extends Controller
         
     }
 
+    public function checkIfLoggedIn(){
+        if (session()->has('user')){
+            return redirect('home/loggedin');
+        }
+        else{
+            return redirect('/loggedout');
+        }
+    }
+
     public function store(Request $request){
         $user = new Login;
         $user->username = $request->un;
@@ -29,6 +40,9 @@ class LoginController extends Controller
         $user->password = $request->ps; 
      
         $user->save();
+
+        $getuser = Login::where('username', '=',$request->un)->value('userid');
+        session(['user'=>$getuser]);
         return redirect('home/loggedin');
     }
 
@@ -51,7 +65,14 @@ class LoginController extends Controller
         }
     }
 
-    public function homeloggedin(){
-        return view('home.loggedin');
+    public function logout(){
+        session()->forget('user');
+        return redirect('/loggedout');
     }
+
+    public function homeloggedin(){
+        //$works = PublishedWorks::orderBy('created_at', 'DESC')->get();
+        return view('home.loggedin', ['works'=>$works]);
+    }
+
 }

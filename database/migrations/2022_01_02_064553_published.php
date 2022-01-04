@@ -19,8 +19,7 @@ class Published extends Migration
             $table->string('title');
             $table->text('description');
             $table->text('work');
-            $table->integer('genre');
-            $table->integer('votes');
+            $table->string('genre');
             $table->timestamps();
         });
     }
